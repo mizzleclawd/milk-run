@@ -1,4 +1,4 @@
-# Shared House List — Convex All Gas Hackathon
+# Milk Run — Convex All Gas Hackathon
 
 A grocery list your whole house shares, that updates on every phone at the same
 time. Paste a recipe link and its ingredients land on the list. No accounts to
