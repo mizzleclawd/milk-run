@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .quickstart-logs
+
+# agent tooling artifact, not part of the app
+.quickstart-runbook.md
