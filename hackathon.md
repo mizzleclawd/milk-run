@@ -16,23 +16,26 @@ plumbing, and no cache invalidation written by hand.
 
 ## Status
 
-**2026-09-01 — foundation running and verified.**
+**2026-09-02 — real shared-list loop verified locally.**
 
 Shipped:
 
-- Next.js 15 + Convex scaffold, Tailwind + shadcn UI.
+- Next.js 16 + Convex scaffold, Tailwind + shadcn UI.
 - `convex/schema.ts` — `groceryItems` table.
 - `convex/groceryItems.ts` — `list` (reactive query), `add`, `setCompleted`,
   `remove` mutations.
-- `next build` passes clean: compiled in 19.2s, 3 static pages generated.
-- Backend verified against a local Convex deployment.
+- The browser UI now uses those real Convex functions; static demo data was removed.
+- Add, complete, restore, and remove all write through Convex.
+- Local Convex deployment verified with a real `Milk` mutation followed by a
+  `groceryItems.list` query returning the new document.
+- `npm run build` passes clean: typecheck plus production Next build.
 
 Not shipped yet — described here as planned, not done:
 
-- Recipe URL -> Firecrawl scrape -> AI ingredient extraction -> merged into the list.
+- Recipe URL -> Firecrawl scrape -> OpenAI ingredient extraction -> merged into the list.
 - Near-duplicate merge, so "milk" and "2% milk" do not both sit on the list.
 - Fridge photo -> AI restock suggestions.
-- Weekly cron reminder before the usual shopping trip.
+- AgentMail intake or a weekly household reminder.
 - Public deployment. The build currently runs against a local Convex backend;
   a cloud deployment is pending account linkage.
 

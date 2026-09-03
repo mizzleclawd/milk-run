@@ -10,12 +10,20 @@ makes it so nobody has to.
 Built for the **Convex All Gas Hackathon** — see [`hackathon.md`](./hackathon.md)
 for the build log and current status.
 
+## What works now
+
+- A real Convex-backed shared list — no static demo data.
+- Add, complete, restore, and remove grocery items from the Next.js UI.
+- Reactive `groceryItems.list` updates every connected client through Convex.
+- Local Convex deployment verified with a real `Milk` mutation and list query.
+
 ## Stack
 
 - [Convex](https://convex.dev) — database, reactive queries, mutations, actions,
   scheduled functions
-- [Firecrawl](https://firecrawl.dev) — recipe page scraping
-- Next.js 15, React 19, Tailwind, shadcn/ui
+- [Firecrawl](https://firecrawl.dev) — recipe page scraping (next feature slice)
+- OpenAI — ingredient cleanup and duplicate-aware merging (next feature slice)
+- Next.js 16, React 19, Tailwind, shadcn/ui
 
 ## Running it
 
